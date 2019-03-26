@@ -29,7 +29,7 @@ object SharedPrefsDao {
             val ids = allBookIds
             val books = ArrayList(ids.size)
             for (id in ids) {
-                if (!id.equals(""))
+                if (id != "")
                     books.add(getBook(id))
             }
             return books
